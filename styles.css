@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #f5e083, #ff8bb9);
+}
+
+/* Header */
+.header {
+  background-color: #ff4d6d;
+  padding: 10px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: Georgia, serif;
+  letter-spacing: 1px;
+}
+
+.menu-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px;
+  gap: 30px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.hero-text button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff4d6d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Gallery Section */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px;
+  gap: 30px;
+}
+
+.gallery-images {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.column img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.gallery-text {
+  flex: 1;
+  background-color: #ff4d6d;
+  padding: 20px;
+}
+
+.gallery-text h2 {
+  font-size: 36px;
+  margin: 10px 0;
+  letter-spacing: 2px;
+}
+
+.gallery-text a {
+  text-decoration: none;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---------------- MEDIA QUERIES ---------------- */
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  /* Stack nav items and show menu icon */
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Stack hero section */
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  /* Stack gallery section */
+  .gallery {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .gallery-images {
+    flex-direction: column;
+  }
+
+  .gallery-text h2 {
+    font-size: 28px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Adjust hero layout */
+  .hero {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  /* Adjust gallery layout */
+  .gallery {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .gallery-images {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .column img {
+    width: 48%;
+  }
+
+  .gallery-text h2 {
+    font-size: 32px;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1025px) {
+  /* Keep horizontal layout */
+  .hero {
+    flex-direction: row;
+  }
+
+  .gallery {
+    flex-direction: row;
+  }
+}
